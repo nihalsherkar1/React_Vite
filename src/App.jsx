@@ -1,15 +1,6 @@
 import "./App.css";
 
 function App() {
-  // Rest paramater
-  // function getInfo(a, ...c) {
-  //   console.log(a, c);
-
-  //   return "Nihal Sherkar";
-  // }
-
-  // console.log(getInfo(1, 2, 3, 4, 5, 6, 7, 8, 9, 41));
-
   // Map ,Filter, find, some, every, includes, indexOf, findIndex
 
   const personsArray = [
