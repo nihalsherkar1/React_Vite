@@ -67,13 +67,13 @@ num2: 9359548230,
 
 # map
 
-// const getAllName = personsArray.map((singlePerson, index) => {
-// console.log(singlePerson, index);
+const getAllName = personsArray.map((singlePerson, index) => {
+console.log(singlePerson, index);
 
-// return singlePerson.name;
-// });
+return singlePerson.name;
+});
 
-// console.log(getAllName);
+console.log(getAllName);
 
 # Find
 
