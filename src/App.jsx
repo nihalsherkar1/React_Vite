@@ -66,6 +66,7 @@ function App() {
     },
   ];
 
+  // * Map
   // const getAllName = personsArray.map((singlePerson, index) => {
   //   console.log(singlePerson, index);
 
@@ -74,27 +75,71 @@ function App() {
 
   // console.log(getAllName);
 
+  // * Find
   // let getPersonFromSangli = personsArray.find((data, index) => {
   //   return data.city === "Sangli";
   // });
 
   // console.log(getPersonFromSangli);
 
+  // * Filter
   // let getAllPersonsFromSangli = personsArray.filter((data, index) => {
   //   return data.city === "Sangli";
   // });
 
   // console.log(getAllPersonsFromSangli);
 
-  let getMobileNumber = personsArray
-    .filter((data, index) => {
-      return data.mobile.num1 === 8806345522;
-    })
-    .map((data) => {
-      return data.name;
-    });
+  // * Filter + map
+  // let getMobileNumber = personsArray
+  //   .filter((data, index) => {
+  //     return data.mobile.num1 === 8806345522;
+  //   })
+  //   .map((data) => {
+  //     return data.name;
+  //   });
 
-  console.log(getMobileNumber);
+  // console.log(getMobileNumber);
+
+  // * Filter + map
+  // const getNameOfNihal = personsArray
+  //   .filter((data, index) => {
+  //     return data.name === "Nihal";
+  //   })
+  //   .map((data) => {
+  //     return data.name;
+  //   });
+
+  // console.log(getNameOfNihal);
+
+  //* Some
+  // const checkSome = personsArray.some((data, index) => {
+  //   return data.age === 25;
+  // });
+
+  // console.log(checkSome);
+
+  const arrData = [1, 2, 3, 4];
+
+  // let result = arrData.some((data, index) => {
+  //   return data === 4;
+  // });
+
+  // console.log(result);
+
+  // * Every
+  // let check2 = arrData.every((data) => {
+  //   return data < 1;
+  // });
+
+  // let check3 = personsArray
+  //   .filter((data) => {
+  //     return data.age > 50;
+  //   })
+  //   .map((data) => {
+  //     return data.name;
+  //   });
+
+  console.log(check3);
 
   return (
     <div>
