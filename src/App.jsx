@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [product, setProduct] = useState([]);
+
   // Map ,Filter, find, some, every, includes, indexOf, findIndex
 
   const personsArray = [
@@ -188,15 +192,63 @@ function App() {
 
   // console.log("Index of given digit is : ", findIndexOfDigit);
 
-  const findIndexOfName = personsArray.findIndex((data) => {
-    return data.name === "Nihal";
-  });
+  // const findIndexOfName = personsArray.findIndex((data) => {
+  //   return data.city === "Sangli";
+  // });
 
-  console.log("Name Index: ", findIndexOfName);
+  // console.log("Name Index: ", findIndexOfName);
+
+  useEffect(() => {
+    const getApi = async () => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch("https://dummyjson.com/products", {
+            method: "GET",
+          });
+
+          const result = await response.json();
+          console.log(result);
+
+          if (result?.products.length > 0) {
+            setProduct(result.products);
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      fetchData();
+    };
+    getApi();
+  }, []);
+  console.log(product);
 
   return (
     <div>
-      <h1>Index of given digit is : {findIndexOfName} </h1>
+      {product.map((data, index) => (
+        <ul
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            listStyleType: "none",
+          }}
+        >
+          <li key={index}> {data.title} </li>
+          <li>
+            <img
+              src={data.images}
+              alt="products"
+              style={{
+                width: "100px",
+                height: "100px",
+                border: "1px solid black",
+                marginLeft: "50px",
+              }}
+            />
+          </li>
+          <li>{data.description} </li>
+        </ul>
+      ))}
     </div>
   );
 }
