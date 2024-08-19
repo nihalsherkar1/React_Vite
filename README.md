@@ -115,7 +115,7 @@ return data.name;
 
 console.log(getNameOfNihal);
 
-# Some
+# Some : 1. This method check the array 2.It return the Boolean Value 3. If single value satisfy it will return the True
 
 const checkSome = personsArray.some((data, index) => {
 return data.age === 25;
@@ -131,7 +131,7 @@ return data === 4;
 
 console.log(result);
 
-# Every
+# Every : 1. This method check the array 2.It return the Boolean Value 3. Need to satisfy all value or conditions then it will return the True
 
 let check2 = arrData.every((data) => {
 return data < 1;
@@ -147,4 +147,45 @@ return data.name;
 
 console.log(check3);
 
-# React_Vite
+# SPREAD OPERATOR
+
+1. let spreadData = [1, 2, 3, 4, 5, 6];
+
+console.log(...spreadData);
+
+2.  function me(a, ...d) {
+    console.log(a, d);
+
+        return "Nihal";
+
+}
+
+console.log(me(1, 2, 3, 4, 6, 8, 7, 9, 41));
+
+# Include : It check that the givn value present or not if present then it return the TRUE else FALSE
+
+1. const fruitData = ["Banana", "Apple", "Grapes", "Water Melon", "Gragen"];
+   console.log(fruitData.includes("Gragen"), fruitData.indexOf("Gragen"));
+
+2. const digit = [1, 2, 5, 6, 24, 55, 45, 3, 45];
+   const check = digit
+   .map((data) => {
+   return data;
+   })
+   .filter((data) => {
+   return data % 2 === 0;
+   })
+   .every((data) => {
+   return data <= 25;
+   });
+
+console.log("The Even Numbers from Array is less than 25 : ", check);
+
+# findIndex : It check the index of value
+
+const digit = [1, 2, 5, 6, 24, 55, 45, 3, 45];
+const findIndexOfDigit = digit.findIndex((data) => {
+return data === 5;
+});
+
+console.log("Index of given digit is : ", findIndexOfDigit);

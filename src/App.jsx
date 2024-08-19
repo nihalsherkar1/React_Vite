@@ -128,8 +128,16 @@ function App() {
 
   // * Every
   // let check2 = arrData.every((data) => {
-  //   return data < 1;
+  //   return data >= 1;
   // });
+
+  // console.log(check2);
+
+  // let myData = personsArray.every((data, index) => {
+  //   return data.age >= 50;
+  // });
+
+  // console.log(myData);
 
   // let check3 = personsArray
   //   .filter((data) => {
@@ -139,11 +147,56 @@ function App() {
   //     return data.name;
   //   });
 
-  console.log(check3);
+  // console.log(check3);
+
+  // * Spread Data
+  // let spreadData = [1, 2, 3, 4, 5, 6];
+
+  // console.log(...spreadData);
+  // console.log([...spreadData]);
+
+  // function me(a, ...d) {
+  //   console.log(a, d);
+
+  //   return "Nihal";
+  // }
+
+  // console.log(me(1, 2, 3, 4, 6, 8, 7, 9, 41));
+
+  // * Include()
+  // const fruitData = ["Banana", "Apple", "Grapes", "Water Melon", "Gragen"];
+
+  // console.log(fruitData.includes("Gragen"), fruitData.indexOf("Gragen"));
+
+  const digit = [1, 2, 5, 6, 24, 55, 45, 3, 45];
+  // const check = digit
+  //   .map((data) => {
+  //     return data;
+  //   })
+  //   .filter((data) => {
+  //     return data % 2 === 0;
+  //   })
+  //   .every((data) => {
+  //     return data <= 25;
+  //   });
+
+  // console.log("The Even Numbers from Array is less than 25 : ", check);
+
+  // const findIndexOfDigit = digit.findIndex((data) => {
+  //   return data === 5;
+  // });
+
+  // console.log("Index of given digit is : ", findIndexOfDigit);
+
+  const findIndexOfName = personsArray.findIndex((data) => {
+    return data.name === "Nihal";
+  });
+
+  console.log("Name Index: ", findIndexOfName);
 
   return (
     <div>
-      <h1>Hello This React Vite </h1>
+      <h1>Index of given digit is : {findIndexOfName} </h1>
     </div>
   );
 }
